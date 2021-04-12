@@ -1,0 +1,16 @@
+examples/
+.vscode/
+*.aux
+*.csv
+*.idx
+*.ind
+*.lof
+*.toc
+*.vrb
+*.gz
+*.log
+*.ps1
+i.ini
+main_answers_sheet.tex
+qatexlst.txt
+*-*.tex

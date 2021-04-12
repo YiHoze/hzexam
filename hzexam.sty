@@ -23,7 +23,7 @@
 \newlist{Answers}{enumerate}{1}
 \setlist[Answers]{label=\protect\@onum{\value*}, labelwidth=1em, leftmargin=!, itemsep=0pt}
 
-\int_new:N \l_QA_question_int
+% \int_new:N \l_QA_question_int
 \int_new:N \l_QA_subquestion_int
 \int_new:N \l_QA_answer_int
 
@@ -35,7 +35,7 @@
     overwrite       .bool_set:N = \l_QA_overwrite_bool,
     teacher         .bool_set:N = \l_QA_teacher_bool,
     answer-sheet    .bool_set:N = \l_QA_answer_sheet_bool,
-    question-no     .code:n = { \int_set:Nn \l_QA_question_int { #1 - 1 } }
+    question-no     .int_set:N = \l_QA_question_int
 }
 
 \NewDocumentCommand \ResetQuestionNo {}

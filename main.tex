@@ -16,6 +16,8 @@
 
 \maketitle
 
+\QAsetup{answer-sheet=false}
+
 \section{문항 만들기}
 
 내가 어렸을 때 초등학교 교사였던 아버지는 종종 집에서 철필과 등사지를 이용하여 시험지를 작성하였다. 그때 그것이 얼마나 고단한 작업인지 나는 알지 못했고, 다만 나는 악필이라 선생님이 될 수 없으리라 생각했다.
@@ -199,9 +201,12 @@ eng 폴더에서 grammar-002.tex 파일을 비롯하여 지정된 번호들과 �
 재미로 할 만한 짓이 못 된다.
 
 \begin{boxedverbatim}
-\QAsetup{file=subject, counter=1, question-no=1}
+\QAsetup{
+    file=subject, counter=1, 
+    question-no=1, answer-sheet=true
+}
 \end{boxedverbatim}
-\QAsetup{file=subject, counter=1, question-no=1}
+\QAsetup{file=subject, counter=1, question-no=1, answer-sheet=true}
 
 \begin{QAwrite}
 

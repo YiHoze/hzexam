@@ -12,7 +12,7 @@ class ExamManager(object):
 
     def __init__(self, argv=None):
 
-        self.dbFile = os.path.join(dirCalled, 'exam.db')
+        self.dbFile = os.path.join(dirCalled, 'texmodule.db')
         if os.path.exists(self.dbFile):
             self.database = configparser.ConfigParser()
             self.database.read(self.dbFile, encoding='utf-8')

@@ -14,7 +14,6 @@ math/
 *.log
 *.ps1
 i.ini
-main_answers_sheet.tex
 qatexlst.txt
 *-*.tex
-assembled.*
+*_answers_sheet.tex

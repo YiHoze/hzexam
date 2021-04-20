@@ -1,4 +1,7 @@
 examples/
+english/
+history/
+math/
 .vscode/
 *.aux
 *.csv
@@ -14,3 +17,4 @@ i.ini
 main_answers_sheet.tex
 qatexlst.txt
 *-*.tex
+assembled.*

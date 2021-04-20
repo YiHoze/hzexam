@@ -141,7 +141,7 @@ $y' = (y + 4x)^2$
 
 \begin{boxedverbatim}
 \QAsetup{file=eng/grammar, counter=5, zeros=3, overwrite=true}
-\QAsetup{file=한국사/고려, counter=10, zeros=3, overwrite=true}
+\QAsetup{file=한국사/고려, counter=10}
 \end{boxedverbatim}
 
 이 설정에 따라 grammar-005.tex, grammar-006.tex, \ldots\ 파일이 eng 폴더에 저장된다.
@@ -167,7 +167,20 @@ eng 폴더에서 grammar-002.tex 파일을 비롯하여 지정된 번호들과 �
 이 방법은 \texttt{-shell-escape} 컴파일 옵션을 요구한다.
 두 방법을 혼용하는 것은 가능하지 않다.
 
-\section{문제집 만들기}
+\section{간격과 색상}
+
+다음은 \verb|\QAsetup|으로 설정할 수 있는 나머지 옵션들과 디폴트 값이다.
+
+\begin{boxedverbatim}
+\QAsetup{
+    question-after-skip=\baselineskip, % 문항 아래 간격
+    answer-before-skip=.75\baselineskip, % 서술형 정답 위 간격
+    answer-color=blue, % 정답 색상
+    answer-hook=\hfill % 객관식 및 단답형 정답 앞에 추가
+}
+\end{boxedverbatim}
+
+\section{정답지}
 
 문제집에 정답지가 없다면, 학원 강사가 자신의 수업을 위해 만든 게 아니라면, 잘 팔릴 리 없다.
 
@@ -184,11 +197,6 @@ eng 폴더에서 grammar-002.tex 파일을 비롯하여 지정된 번호들과 �
 \section{결어}
 
 판형이나 잡다한 장식과 관련된 것은 작성자가 궁리할 일이어서 고려하지 않았다.
-그러나 만들다 보니 다른 이러저러한 문제들이 보인다.
-이를테면, 정답지가 아니라 풍부한 해설이 포함된 해답지를 만들고 싶다면? 
-여차저차하게 후크를 추가하여 매크로를 고치면 될 것이다.
-폰트 따위를 설정 명령을 통해 변경하게 만드는 것도 그다지 어렵지 않을 것이다.
-단지 성가실 뿐.
 
 다음 단계로 생각해볼 것은 문항 파일들을 데이터베이스에 넣는 것이다.
 개인이 아니라 다수가 집단으로 문항들을 만들고 관리하려면 데이터베이스가 필수적이다.
@@ -209,7 +217,6 @@ eng 폴더에서 grammar-002.tex 파일을 비롯하여 지정된 번호들과 �
 \QAsetup{file=subject, counter=1, question-no=1, answer-sheet=true}
 
 \begin{QAwrite}
-
 \begin{premise}[3]
 If there is an error, select the one underlined. Some sentences are correct and no sentence contains more than one error. 
 \end{premise}
@@ -231,11 +238,9 @@ Last \ulans*{spring} the roofers replaced the asphalt shingles \ulans*{that} a h
 }{
 \ca{3}
 }
-
 \end{QAwrite}
 
 \begin{QAwrite}
-
 \begin{premise}
 빈 칸을 알맞은 말로 채우시오.
 \end{premise}
@@ -251,12 +256,10 @@ Every night, we read a \uline{\phantom{book}} together in bed.
 }{
 \ca*{book}
 }
-
 \end{QAwrite}
 
 
 \begin{QAwrite}
-
 \qa{
 위대한 신 도깨비의 이름은 무엇인가요?
 }[ 
@@ -267,7 +270,6 @@ Every night, we read a \uline{\phantom{book}} together in bed.
 ]{
 \ca{4}
 }
-
 \end{QAwrite}
 
 \begin{QAwrite}

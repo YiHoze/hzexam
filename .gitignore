@@ -8,6 +8,7 @@ math/
 *.idx
 *.ind
 *.lof
+*.out
 *.toc
 *.vrb
 *.gz
